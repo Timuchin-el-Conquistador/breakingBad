@@ -1,0 +1,14 @@
+.container{
+    display:flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.filterOpen{
+    border-radius: 20px;
+    color:white;
+    background-color: blue;
+    width:200px;
+    margin:auto;
+}
+

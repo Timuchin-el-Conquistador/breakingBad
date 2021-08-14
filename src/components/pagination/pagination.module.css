@@ -1,0 +1,18 @@
+.paginationNavigation{
+    display:flex;
+    list-style-type:none;
+}
+
+
+
+.linkPage{
+    border:1px solid black;
+    padding:10px;
+    text-decoration: none;
+    color:black
+}
+
+.active{
+    background-color:green;
+    color:white
+}
