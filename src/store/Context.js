@@ -2,7 +2,10 @@ import React from 'react'
 
 
 const Context = React.createContext({
-     list:[]
+     list:[],
+     quotes: [],
+     length:'',
+     page:''
 })
 
 export default Context

@@ -8,12 +8,7 @@ const BreakingBadCharacters = (props) => {
     if(props.filterInputDat.length>0){   /*to filter list of characters based on input data*/
         recievedContext.list = recievedContext.list
         .filter(el => el.name.substr(0,props.filterInputDat.length).toLowerCase()===(props.filterInputDat.toLowerCase()))
-       
     }
-    
-    console.log(recievedContext.quotes)
-    console.log(recievedContext.list)
-    
     const onQuotesButtonClicked = (event) =>{
         props.onQuoteButton(event.target.name.split(',')) /*to split button name attr into 2 items array*/
     }

@@ -8,7 +8,7 @@ import FilterBreakingBadCharacters from './components/Filter/filterBreakingBadCh
 function App() {
   const [inputValue, setInputValue] = useState('')
   const filterCharacterByName = onFilterCharactersByName =>{
-    setInputValue(onFilterCharactersByName)
+    setInputValue(onFilterCharactersByName)  /*storing input data to pass on breakingbadCharacters component*/
   }
   
 

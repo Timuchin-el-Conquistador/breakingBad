@@ -13,16 +13,16 @@ const ReactProvider = (props) =>{
         const repsonce = await fetch(url)
         return  await repsonce.json()
     }
-    fetchHandler('https://www.breakingbadapi.com/api/characters')
+    fetchHandler('https://www.breakingbadapi.com/api/characters')/*making two fetch requests for characters and quotes*/
     .then(recievedData=> setFetchedData(recievedData) )
     fetchHandler('https://www.breakingbadapi.com/api/quotes')
-    .then(recievedData=> setFetchedQuotes(recievedData) )
+    .then(recievedData=> setFetchedQuotes(recievedData) )/*and storing in state the dat we recieved from api*/
     },[])
-    const endingIndex = page*10
+    const endingIndex = page*10 /*to create pagination i need to use slicing method and for that react must to define begining and ending index*/
     const startingIndex = endingIndex-10
  
     const onPageSelected = pageSelected =>{
-        setPage(Number.parseInt(pageSelected))
+        setPage(Number.parseInt(pageSelected)) /*recived data from button in pagination component and store in state*/
     }
   
     return (
@@ -34,7 +34,7 @@ const ReactProvider = (props) =>{
          
          }}>
            {props.children}
-           <Pagination  pageSelected={onPageSelected}/>
+           <Pagination  pageSelected={onPageSelected}/> 
         </Context.Provider>
     )
     }
